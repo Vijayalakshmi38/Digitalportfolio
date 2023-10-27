@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KGAC</title>
+        <style>
+            body{
+                font-family: serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+            }
+            header {
+                background-color: lightpink;
+                color: #fff;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;
+            }
+
+            .header-content h1{
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            p{
+                font-size: 1.5rem;
+            text-align: center;    
+                }
+                table{
+                    text-align: center;
+                    background-color:  whitesmoke;             
+                  }
+                  p1{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 25px;
+                    text-decoration: none;
+                    color: rgb(153, 130, 238);
+                  }
+                  p2{
+                    font-size: 26px;
+                    color: rgb(153, 130, 238);
+                  }
+                    
+
+            .profile-picture{
+                width: 105px;
+                height: 105px;
+                border-radius: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 45px;
+                left: 45px;
+            }
+
+            nav{
+                font-size: 28px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+            }
+
+            nav ul{
+                list-style-type: none;
+                padding: 10px;
+            }
+
+            nav ul li{
+                display: inline;
+                margin: 0 20px;
+            }
+
+            nav ul li a {
+                font-size: 35px;
+                text-decoration: none;
+                color: gold;
+            }
+
+            .section-content{
+                background-color: white;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            .download-button{
+                background-color: #333;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 20px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .download-button:hover {
+                background-color: yellowgreen;
+            }
+
+            footer{
+                text-align: center ;
+                padding:  1rem 0;
+                background-color: #333;
+                color: #fff;
+            }
+
+            ul{
+                list-style-type: lower-roman;
+                padding-left: 20px;
+            }
+        </style>
+        <body
+        <header>
+            <div class="header-content">
+                <img src="1.jpg" alt="Your Profile Picture" class="profile-picture">
+                <h1>VIJAYALAKSHMI A</h1>
+                <p>Passionate on Education...</p>
+            </div>
+        </header>
+    </head>
+
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a> </li>
+        <li><a href="#education">Education</a> </li>
+        <li><a href="#skills">Skills</a> </li>
+        <li><a href="#projects">Projects</a> </li>
+        <li><a href="#resume">Resume</a> </li>
+        
+    </ul>
+</nav>
+
+<section id="about">
+    <div class="section-content">
+        <h2>About me</h2>
+        <p1>Hello Everyone! This is Vijayalakshmi, I am Final Year Student..</p1>
+    </div>
+</section>
+<section id="education">
+    <div class="section-content">
+        <h2>Education </h2>
+        <p2>KAMARAJAR GOVT ARTS COLLEGE-CS</p2>
+        <table border="1">
+            <tr>
+                <th>Degree</th>
+                <th>College</th>
+                <th>Department</th>
+            </tr>
+            <tr>
+                <th>10TH</th>
+                <th>AVVAIYAR GOVT GIRLS SCHOOL</th>
+                <th>Null</th>
+            </tr>
+            <tr>
+                <th>12TH</th>
+                <th>AVVAIYAR GOVT GIRLS SCHOOL</th>
+                <th>MATHS BIOLOGY</th>
+            </tr>
+            <tr>
+                <th>BSC</th>
+                <th>KAMARAJAR GOVT ARTS COLLEGE</th>
+                <th>CS</th>
+            </tr>
+            </table>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>COA</li>
+            <li>Machine Learning</li>
+            <li>C++</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="section-content">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="project1.html">Project 1</a></li>
+            <li><a href="project2.html">Project 2</a></li>
+        </ul>
+    </div>
+</section>
+<section id="resume">
+    <center>
+        <div class="section-content">
+            <h2>Resume</h2>
+            <a href="Resume.docx" class="download-button">Download CV</a>
+        </div>
+    </center>
+</section>
+<footer>
+    <p>&copy;2023 VIJAYALAKSHMI A</p>
+</footer>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId=this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+        
+        if(targetElement){
+            window.scrollTo({
+                top: targetElement.offsetTop,
+           behavior:'smooth'
+         });
+        }
+    
+    });
+    </script>
+    </body>
+    </html>
